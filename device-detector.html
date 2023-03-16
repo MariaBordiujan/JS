@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example of Adaptive Page</title>
+    <style>
+        .title-large {
+            padding: 2em;
+        }
+        .title-medium {
+            padding: 1em;
+            text-align: center;
+        }
+        .title-small {
+            padding: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body 
+    onresize="adapt()"
+    onload="adapt()"
+    >
+
+    <h1 id="heading">JS Example of Adaptive Page</h1>
+
+    <script>
+
+    function adapt() {
+
+        const BREAKPOINT_1 = 1200
+        const BREAKPOINT_2 = 800
+        let viewportWidth  = innerWidth
+        
+        if ( viewportWidth >= BREAKPOINT_1 ) {
+
+            heading.className = 'title-large'
+
+
+        } else if ( BREAKPOINT_2 <= viewportWidth && viewportWidth < BREAKPOINT_1 ) {
+
+            heading.className = 'title-medium'
+
+        } else {
+
+            heading.className = 'title-small'
+
+        }
+
+    }
+
+    </script>
+
+</body>
+</html>
