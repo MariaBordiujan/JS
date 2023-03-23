@@ -1,0 +1,30 @@
+body {
+    color: white;
+}
+#gameMap {
+    border: 3px solid #444;
+    background-color: #bbb;
+    width: 72px;
+    height: 96vh;
+    margin-left: 1em;
+    display: inline-block;
+}
+#gameMap .robot {
+    width: 72px;
+    height: 72px;
+    background-image: url(robot.png);
+}    
+.controls {
+    display: inline-block;
+    vertical-align: top;
+}
+.controls button {
+    margin-left: 1em;
+    height: 2em;
+    width: 2.5em;
+    position: absolute;
+    top: calc((100vh - 4.5em) / 2);
+} 
+.controls button:nth-child(2) {
+    transform: translateY(2.5em);
+}

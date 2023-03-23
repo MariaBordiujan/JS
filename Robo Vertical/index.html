@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robo Walk | Vertical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="gameMap">
+        <div class="robot"></div>
+    </div>
+
+    <div class="controls">
+
+        <button 
+            onclick="
+            if (robotVertical * STEP > 0) {
+            robotVertical--
+            }
+            render()
+            ">▲
+            </button>
+        
+        <button
+            onclick="
+            if (robotVertical * STEP < innerHeight - STEP * 3) {
+            robotVertical++
+            }
+            render()
+            ">▼
+        </button>
+
+    </div>
+    
+    <script src="game.js"></script>
+
+</body>
+</html>
