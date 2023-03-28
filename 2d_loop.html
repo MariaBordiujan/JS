@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2D Loop with For</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+/* поменять на 16px */
+            line-height: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container"></div>
+
+    <script>
+
+        let html = ``
+
+        for (let r = 1; r <= 10; r++) {
+
+            for (let c = 1; c <= 10; c++) {
+                if (c == 1 || c == 10) {
+                    html += `▩`
+                } else if (r == 1 || r == 10) {
+                    html += `▩`
+                } else {
+                    html += `▢`
+                }
+            }
+
+            html += `<br>`
+        }
+
+        container.innerHTML = html
+
+    </script>
+
+</body>
+</html>
