@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pocket Calculator</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial;
+            font-size: 25px;
+        }
+        #calculator {
+            border: 2px solid #555;
+            padding: 5px;
+            width: 250px;
+            height: 250px;
+        }
+        #resScreen {
+            background-color: #444;
+            border: 1px solid #555;
+            height: 30px;
+            color: white;
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+        #inputs input {
+            display: block;
+            padding: 10px;
+            width: 218px;
+            margin: auto;
+        }
+        #controls {
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        #controls button {
+            padding: 20px;
+            color: #333;
+            display: inline-block;
+        }
+        #controls button:last-child {
+            width: 242px;
+            height: 25px;
+            margin-top: 10px;
+            line-height: 1px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="calculator">
+
+        <div id="resScreen">0</div>
+
+        <div id="inputs">
+            <input type="text" id="inputA" placeholder="value A">
+            <input type="text" id="inputB" placeholder="value B">
+        </div>
+
+        <div id="controls">
+            <button onclick="plus()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button onclick="minus()">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+            <button onclick="multiply()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button onclick="divide()">
+                <i class="fa-solid fa-divide"></i>
+            </button>
+            <button onclick="reset()">RESET</button>
+        </div>
+
+        <script>
+            function plus () {
+                let a = parseInt( inputA.value )
+                let b = parseInt ( inputB.value )
+                let res
+
+                // HW1 
+                if (inputA.value == '' || inputB.value == '') {
+                    res = "error"
+                } else {
+                    res = a + b
+                }
+
+                resScreen.innerHTML = res
+            }
+
+            function minus () {
+                let a = parseInt( inputA.value )
+                let b = parseInt ( inputB.value )
+                let res
+
+                // HW1 
+                if (inputA.value == '' || inputB.value == '') {
+                    res = "error"
+                } else {
+                    res = a - b
+                }
+
+                resScreen.innerHTML = res
+            }
+
+            function multiply () {
+                let a = parseInt( inputA.value )
+                let b = parseInt ( inputB.value )
+                let res
+
+                // HW1 
+                if (inputA.value == '' || inputB.value == '') {
+                    res = "error"
+                } else {
+                    res = a * b
+                }
+
+                resScreen.innerHTML = res
+            }
+
+            function divide () {
+                let a = parseInt( inputA.value )
+                let b = parseInt ( inputB.value )
+                let res
+
+                // HW1 
+                if (inputA.value == '' || inputB.value == '') {
+                    res = "error"
+                } else {
+                    res = a / b
+                }
+
+                resScreen.innerHTML = res
+            }
+
+            function reset () {
+                resScreen.innerHTML = 0
+                inputA.value = ''
+                inputB.value = ''
+            }
+        </script>
+    </div>
+
+</body>
+</html>
