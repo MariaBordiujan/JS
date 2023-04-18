@@ -97,6 +97,7 @@ const shoot = function () {
     }
 }
 
+// HW3
 const resetBird = function () {
     speed_x   = 3
     score     = 0
