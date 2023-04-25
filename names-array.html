@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Names</title>
+</head>
+<body>
+    
+    <div id="list"></div>
+
+    <script>
+        let names = [
+        'Jacomina Dayaram',
+        'Akhenaten Kofi',
+        'Kenton Iqaluk',
+        'Coos Leonard',
+        'Cerere Haskel',
+        ]
+
+        // 1. print the names using a loop in console
+        // HW1: modify this loop so it prints all besides first and last names
+
+        for (let i=1; i<4; i++) {
+                console.log( names[i] )
+            }
+        
+        // HW2: modify this loop so it outputs names -> html <ol>
+
+        let ol = `<ol>`
+            for (let i=0; i<5; i++) {
+                ol += `<li>${names[i]}</li>`
+            }
+        ol += `</ol>`
+        list.innerHTML = ol
+
+    </script>
+
+</body>
+</html>

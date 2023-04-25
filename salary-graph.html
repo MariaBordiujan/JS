@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salary Graph</title>
+    <style>
+        #graph {
+            width: 720px;
+            height: 500px;
+            border: 1px solid black;
+
+            display: flex;
+            align-items: end;
+        }
+        #graph .bar {
+            background-color: rgb(255, 170, 0);
+            width: 50px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="graph"></div>
+
+    <script>
+        let salary = [
+            3000,
+            3000,
+            3000,
+            4500,
+            4500,
+            4700,
+            4700,
+            4700,
+            6000,
+            6000,
+            6000,
+            6000,
+        ]
+
+        // HW1: reverse the graph 
+
+        for (let i=11; i>=0; i--) {            
+
+            graph.innerHTML += `
+                <div class="bar"
+                    style="height: ${salary[i]/20}px"
+                ></div>
+                `
+        }
+    </script>
+
+</body>
+</html>
