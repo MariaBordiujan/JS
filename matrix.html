@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrix | Array</title>
+    <style>
+        #table td {
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+   <div id="table"></div>
+
+    <script>
+        let matrix = [
+                [-1, 2, 5],
+                [ 1,-2, 7],
+                [-5,-3,-1]
+            ]
+
+        let result = `<table border=1>`
+        for (let row= 0; row<3; row++) {
+            result += `<tr>`
+            for (let col=0; col<3; col++) {
+                result += `<td>${matrix[row][col]}</td>`
+            }
+            result += `</tr>`
+        }
+        result += `</table>`
+        table.innerHTML = result
+
+    </script>
+</body>
+</html>
