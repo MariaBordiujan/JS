@@ -1,0 +1,26 @@
+body {
+    background-color: #123;
+}
+#map {
+    width: 500px;
+    height: 500px;
+    border: 3px solid #666;
+}
+#map div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #888;
+    float: left;
+}
+#map .pac {
+    background: url(pac.png);
+}
+#map .coin {
+    background: url(coin.png);
+}
+#map .bomb {
+    background: url(bomb.png);
+}
+#map .heart {
+    background: url(heart.png);
+}
